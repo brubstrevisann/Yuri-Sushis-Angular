@@ -1,0 +1,200 @@
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <title>Yuri Sushis</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand" style="padding-left: 9.312rem;" href="#">Yuri Sushis</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" style="text-align: center;margin-left: 10rem;" id="navbarNav">
+      <ul class="navbar-nav ml-auto" style="padding-right: 19rem;">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">INICÍO <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">CARDÁPIO</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">RESERVAR</a>
+        </li>
+      </ul>
+    </div>
+  </nav> <br><br><br><br><br><br><br><br>
+
+  <div>
+    <img src="assets/imgs/sushi2.png" class="img-fluid rounded float-right" style="margin-top: -14.8rem; float: right!important;" alt="Responsive image">
+    <h1 style="padding-left: 9.312rem;">Sushi</h1><br>
+    <p class="mb-0" style="padding-left: 9.312rem; opacity: 0.8;">Full control of what you use and pay for</p>
+   </div> <br><br><br><br><br><br><br><br><br>
+   
+   <div class="triangulo"></div> <br><br><br> 
+
+   <h1 class="text-center">Nosso cardápio</h1> <br><br><br> <br>
+  
+   <div class="album py-5">
+    <div class="container" style="max-width: 1694px;">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="background-color:#101519">
+            <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="assets/imgs/combinados-variados.png" data-holder-rendered="true">
+            <p class="card-text p-cards">Combinados variados</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="background-color: #101519">
+            <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="assets/imgs/combinados-doces.png" data-holder-rendered="true">
+            <p class="card-text p-cards">Combinados doces</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="background-color: #101519">
+            <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="assets/imgs/barcas.png" data-holder-rendered="true">
+            <p class="card-text p-cards">Barcas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br> <br><br> <br>
+    <h1 class="text-center">Reserva</h1>
+    <br> <br>
+    <p class="mb-0 text-center" style="opacity: 0.8;">Escolha uma data para experimentar nosso cardápio</p>
+    <br><br>
+
+
+    <ng-template #templateReservar class="fade bd-example-modal-lg" style=" padding-right: 0  !important ;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <!-- <div class="modal-dialog modal-lg" style="max-width: 938px; margin-top: 5rem;"> -->
+       <!-- <h1 class="text-center">Reserva</h1> -->
+        <!-- <div class="modal-content" style="background: #D6A74F;"> -->
+          <div class="modal-body" style=" max-width: 938px; margin-top: 5rem;padding: 10rem; background: #D6A74F;">
+            <form class="needs-validation" novalidate [formGroup] = "form">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input  type="email" name="reply_to" class="form-control" formControlName="email" [ngClass] = "{ 'is-invalid' : submitted && hasError('email')}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@gmail.com">
+                <div class="invalid-feedback" *ngIf="hasError('email') && hasError('email')['required']">
+                  Por favor informe o email.
+                </div>
+                <div class="invalid-feedback" *ngIf="hasError('email') && hasError('email')['email']">
+                  Por favor informe um email válido.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputNomeCompleto">Nome Completo</label>
+                <input  type="text" class="form-control" formControlName="nome" id="inputNomeCompleto" placeholder="Felipe Schorles" [ngClass] = "{ 'is-invalid' : submitted && hasError('nome')}">
+                <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['required']">
+                  Por favor informe o seu nome.
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="qtdPessoas">Quantidade de pessoas</label>
+                  <select class="form-control" formControlName="qtdPessoas" id="qtdPessoas" [ngClass] = "{ 'is-invalid' : submitted && hasError('qtdPessoas')}">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <div class="invalid-feedback" *ngIf="hasError('qtdPessoas') && hasError('qtdPessoas')['required']">
+                    Por favor informe a quantidade de pessoas.
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="data">Data e horário</label>
+                  <input  type="date" id="data" class="form-control" formControlName="data" [ngClass] = "{ 'is-invalid' : submitted && hasError('data')}">
+                  <div class="invalid-feedback" *ngIf="hasError('data') && hasError('data')['required']">
+                    Por favor informe a data e horário.
+                  </div>
+                </div>
+              </div>
+              <div  style="border-top:0; margin-top: 16rem; margin-bottom: -8rem;" class="modal-footer justify-content-center">
+                <button type="submit" (click)="reservar()" id="submit_form" type="submit" class="btn_agendar_modal justify-content-center">Agendar data</button>
+               
+              </div>
+            </form>
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
+    </ng-template>
+
+
+<ng-template #templateReservaSucesso class="fade bd-example-modal-lg-confirmacao" style=" padding-right: 0  !important ;"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style="max-width: 938px; margin-top: 5rem;">
+    <h1 class="text-center">Reserva</h1>
+    <div class="modal-content modal-reservar" style="background: #D6A74F;">
+      <div class="modal-body" style="padding: 10rem;">
+        <h1 class="text-center">Reserva feita com sucesso</h1>
+        <h2  style="color: #FFFFFF; opacity: 1;" class="text-center">Um email de confirmação foi enviado.</h2>
+      </div>
+      <div  style="border-top:0; margin-top: 6rem; margin-bottom: 1rem;" class="modal-footer justify-content-center">
+        <button type="button" (click)="cardapio()" id="btn_ver_cardapio" type="submit" class="btn_agendar_modal justify-content-center">Ver cardápio</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<div class="row justify-content-center">
+  <button  #buttonReservar type="button" data-toggle="modal"  id="btn_modal_reservar "  data-target=".bd-example-modal-lg" (click)="openModal(templateReservar)" class="btn_agendar justify-content-center">Agendar data</button>
+  <button  #btnReservaConfirmada  hidden type="button"  data-toggle="modal" (click)="hideModal() ;openModal(templateReservaSucesso); " data-target=".bd-example-modal-lg-confirmacao"></button>
+</div>
+<br> <br><br> <br>  <br> <br><br> <br>
+
+<!-- <footer class="mastfoot mt-auto text-right"> -->
+  <div class="desenho-cabecalho">
+  </div>
+
+  <div class="text-right cabecalho">
+    <p class="text-right">Terms of Service || Privacy Policy</p>
+  </div> 
+</body>
+<!-- </footer>  -->
+<!-- <div class="eita">
+  
+</div> -->
+<!-- <div class="eita2">
+  
+</div> -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script>
+//update this with your js_form selector
+
+
+
+
+
+
+// var js_form = document.getElementById(form_id_js);
+
+// js_form.addEventListener("submit", function (e) {
+//     e.preventDefault();
+// });
+
+// function sendEmail(){
+//   Email.send({
+//         SecureToken : "3435E39A838F76B1FFF7ACA6E0E2A960AEC8656181B23B377467C222E826845E511E5EEFC82D34066DC882590B90289C",
+//         To : 'bruno.amatoz@hotmail.com',
+//         From : "bruno.amatoz@hotmail.com",
+//         Subject : "This is the subject",
+//         Body : "And this is the body"
+//     }).then(
+//       message => alert(message)
+//     );
+//   }
+
+</script>
+</html>

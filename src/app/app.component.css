@@ -1,0 +1,140 @@
+
+button{
+    width: auto !important;
+}
+body {
+    background-color: #101519;
+    font-family: "Overlock SC", serif 
+}
+
+h3 {
+    top: 46px;
+    left: 164px;
+    width: 126px;
+    height: 30px;
+    letter-spacing: 0.38px;
+    color: #FFFFFF;
+    opacity: 1;
+    font: normal normal normal 20px/30px Overlock SC;
+    position: relative;
+}
+h1{
+    font: normal normal normal 49px/59px Overlock SC;
+    letter-spacing: 0.73px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+p{
+    color: white;
+}
+input, select{
+    background: #D6A74F !important;
+    border: 1px solid #000000 !important;
+}
+
+.p-cards{
+    text-align: center;
+    font: normal normal normal 38px/47px Overlock SC;
+    letter-spacing: 2.89px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+.sushi {
+    color: #FFFFFF;
+    top: 285px;
+    left: 142px;
+    width: 133px;
+    height: 59px;
+    font: normal normal normal 30px/59px Overlock SC;
+    opacity: 1;
+    position: relative;
+}
+
+.full {
+    top: 360px;
+    left: 142px;
+    width: 518px;
+    height: 34px;
+    text-align: left;
+    font: normal normal normal 28px/34px Overlock SC;
+    letter-spacing: 0.42px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    position: relative;
+}
+
+.btn_agendar{
+    background: #D6A74F 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    text-align: center;
+    text-align: center;
+    font: normal normal 600 18px/37px Nunito;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+    opacity: 1;
+    
+}
+
+.btn_agendar_modal{
+    background-color: #101519;
+    font: normal normal 600 18px/37px Nunito;
+    color: white;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.desenho-cabecalho{
+    line-height: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #101519 #D6A74F #D6A74F #D6A74F;
+    border-width: 126px 958px  102px 922px;
+    position: absolute;
+    height: 543px;
+}
+
+/* 
+.eita2{
+
+    line-height: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #101519 red #101519 #101519;
+    border-width: 197px 2267px 110px 938px;
+
+} */
+
+.triangulo{
+    
+    line-height: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #101519 #D6A74F #101519 #D6A74F;
+    border-width: 107px 0px 38px 1104px;
+
+    position: relative;
+    z-index: 0;
+}
+
+.cabecalho{
+    position: relative;
+    z-index: 1;
+    padding-right: 8rem;
+    top: 513px;
+    
+}
+
+@font-face {
+    font-family: "Overlock SC";
+    src: local("OverlockSC-Regular.ttf")
+    url(/yuri-sushis/src//OverlockSC-Regular.ttf);
+  }
+
+  .modal-reservar{
+    background-color:#D6A74F !important; border: 0 !important;
+  }
