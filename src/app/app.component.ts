@@ -102,7 +102,7 @@ export class AppComponent implements OnInit {
           if (error.status == 200) {
             this.onSuccess()
           } else {
-            this.onSuccess()
+            this.onError()
           }
         }
       )
@@ -127,8 +127,6 @@ export class AppComponent implements OnInit {
   //   return form_data.join("&");
   // }
   onSuccess() {
-    // this.btn_modal_reservar.nativeElement.click();
-    // this.btn_modal_reserva_confirmada.nativeElement.click();
     let el: HTMLElement = this.btnReservaConfirmada.nativeElement;
     el.click();
   }
