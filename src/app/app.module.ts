@@ -21,7 +21,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [GeralService,HttpClient],
   bootstrap: [AppComponent]

@@ -4,7 +4,9 @@ button{
 }
 body {
     background-color: #101519;
-    font-family: "Overlock SC", serif 
+    font-family: "Overlock SC", serif ;
+    width:100%;
+
 }
 
 h3 {
@@ -91,22 +93,10 @@ input, select{
     height: 0;
     border-style: solid;
     border-color: #101519 #D6A74F #D6A74F #D6A74F;
-    border-width: 126px 958px  102px 922px;
+    border-width: 156px 937px  403px 951px;
     position: absolute;
     height: 543px;
 }
-
-/* 
-.eita2{
-
-    line-height: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: #101519 red #101519 #101519;
-    border-width: 197px 2267px 110px 938px;
-
-} */
 
 .triangulo{
     
@@ -135,6 +125,39 @@ input, select{
     url(/yuri-sushis/src//OverlockSC-Regular.ttf);
   }
 
-  .modal-reservar{
-    background-color:#D6A74F !important; border: 0 !important;
+.modal-reservar{
+  background-color:#D6A74F !important; border: 0 !important;
+}
+
+.modal-backdrop {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 480px) { 
+    .card.bg-white.mx-auto {
+      width: 100% !important; 
+    }
+    .triangulo{
+        line-height: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: #101519 #D6A74F #101519 #D6A74F;
+        border-width: 107px 0px 38px 442px;
+        position: relative;
+        z-index: 0;
+    }
+    .desenho-cabecalho{
+        line-height: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: #101519 #D6A74F #D6A74F #D6A74F;
+        border-width: 104px 229px  453px 240px;
+        
+        position: absolute;
+        height: 543px;
+    }
+    
   }

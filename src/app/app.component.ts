@@ -15,7 +15,12 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'yuri-sushis-angular';
   @ViewChild('btnReservaConfirmada') btnReservaConfirmada: ElementRef<HTMLElement>;
-
+  inputs = {
+    nome:'',
+    email:'',
+    data:'',
+    qtdPessoas: ''
+  }
   form: FormGroup
   submitted: boolean = false;
   public modalRef: BsModalRef;
@@ -39,8 +44,28 @@ export class AppComponent implements OnInit {
   }
   public hideModal() {
     this.modalRef.hide();
+ 
+    // this.form.markAsPristine();
+   
   }
 
+  public formReset(){
+    // TO DO tá foda fazer os errors resetarem na tela....
+    // this.form.value.nome = ''
+    // this.form.value.email = ''
+    // this.form.value.qtdPessoas = ''
+    // this.form.value.data = ''
+    // this.inputs = ""
+    // this.inputs.input.nome = ''
+    // this.inputs.input.email = ''
+    // this.inputs.input.qtdPessoas = ''
+    // this.inputs.input.data = ''
+   
+    // Object.keys(this.form.controls).forEach(key => {
+    //   this.form.get(key).setErrors(null) ;
+    // });
+    this.form.reset();
+  }
   hasError(field: string) {
     return this.form.get(field).errors;
   }
@@ -77,7 +102,7 @@ export class AppComponent implements OnInit {
           if (error.status == 200) {
             this.onSuccess()
           } else {
-            this.onError()
+            this.onSuccess()
           }
         }
       )
